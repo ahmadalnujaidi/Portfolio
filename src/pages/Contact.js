@@ -86,7 +86,7 @@ const Contact = () => {
               </ContactInfoIcon>
               <ContactInfoItemContent>
                 <ContactInfoItemTitle>Location</ContactInfoItemTitle>
-                <ContactInfoItemText>Your City, Country</ContactInfoItemText>
+                <ContactInfoItemText>Khobar, Saudi Arabia</ContactInfoItemText>
               </ContactInfoItemContent>
             </ContactInfoItem>
             
@@ -96,7 +96,7 @@ const Contact = () => {
               </ContactInfoIcon>
               <ContactInfoItemContent>
                 <ContactInfoItemTitle>Email</ContactInfoItemTitle>
-                <ContactInfoItemText>your.email@example.com</ContactInfoItemText>
+                <ContactInfoItemText>ahmadalnujaidi02@gmail.com</ContactInfoItemText>
               </ContactInfoItemContent>
             </ContactInfoItem>
             
@@ -106,14 +106,14 @@ const Contact = () => {
               </ContactInfoIcon>
               <ContactInfoItemContent>
                 <ContactInfoItemTitle>Phone</ContactInfoItemTitle>
-                <ContactInfoItemText>+1 (123) 456-7890</ContactInfoItemText>
+                <ContactInfoItemText>+966 (053) 350-5622</ContactInfoItemText>
               </ContactInfoItemContent>
             </ContactInfoItem>
           </ContactInfoItems>
           
           <SocialLinks>
             <SocialLink 
-              href="https://github.com" 
+              href="https://github.com/ahmadalnujaidi" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ y: -5, color: '#6e5494' }}
@@ -122,7 +122,7 @@ const Contact = () => {
               <FaGithub />
             </SocialLink>
             <SocialLink 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/ahmadalnujaidi" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ y: -5, color: '#0077b5' }}
@@ -131,7 +131,7 @@ const Contact = () => {
               <FaLinkedin />
             </SocialLink>
             <SocialLink 
-              href="https://twitter.com" 
+              href="https://x.com/antigon02" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ y: -5, color: '#1da1f2' }}
@@ -214,10 +214,11 @@ const Contact = () => {
 
       <MapSection>
         <MapIframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059353029!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sca!4v1619756483452!5m2!1sen!2sca" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7234735.707288746!2d44.0302397!3d24.4641121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e35b8f7a8d7f0ef%3A0xc3eecde35566b2a4!2sEastern%20Province%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1712229999999!5m2!1sen!2ssa" 
           allowFullScreen="" 
           loading="lazy"
           title="Location Map"
+          referrerPolicy='no-referrer-when-downgrade'
         />
       </MapSection>
     </ContactContainer>

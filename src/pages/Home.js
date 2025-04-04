@@ -14,8 +14,8 @@ const Home = () => {
           transition={{ duration: 0.6 }}
         >
           <Greeting>Hello, I'm</Greeting>
-          <Name>Your Name</Name>
-          <Title>Software Engineering Student</Title>
+          <Name>Ahmad Alnujaidi</Name>
+          <Title>Software Engineer</Title>
           <Description>
             I'm passionate about building innovative solutions and creating meaningful user experiences.
             Specializing in full-stack development with expertise in modern technologies.
@@ -42,7 +42,7 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <ProfileImage src="/images/profile-placeholder.jpg" alt="Your Name" />
+          <ProfileImage src="/images/face.jpg" alt="Your Name" />
         </HeroImage>
       </HeroSection>
 

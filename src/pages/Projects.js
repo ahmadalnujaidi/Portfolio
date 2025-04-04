@@ -171,7 +171,7 @@ const projectsData = [
     technologies: ['Flask', 'Python', 'HTML', 'Computer Vision', 'YOLO'],
     category: ['web', 'other'],
     github: 'https://github.com/ahmadalnujaidi/Object-Detection-Web-Application',
-    // demo: 'https://ecommerce-platform-demo.netlify.app/'
+    demo: 'https://youtu.be/qv1UIVPW2Jc'
   },
   {
     title: 'Task Management App',

@@ -10,10 +10,10 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrapper>
         <FooterTop>
-          <FooterLogo>Portfolio</FooterLogo>
+          <FooterLogo>Ahmad Ibrahim Alnujaidi</FooterLogo>
           <SocialIcons>
             <SocialIconLink 
-              href="https://github.com" 
+              href="https://github.com/ahmadalnujaidi" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ y: -5, color: '#6e5494' }}
@@ -22,7 +22,7 @@ const Footer = () => {
               <FaGithub />
             </SocialIconLink>
             <SocialIconLink 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/ahmadalnujaidi" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ y: -5, color: '#0077b5' }}
@@ -31,7 +31,7 @@ const Footer = () => {
               <FaLinkedin />
             </SocialIconLink>
             <SocialIconLink 
-              href="https://twitter.com" 
+              href="https://x.com/antigon02" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ y: -5, color: '#1da1f2' }}
@@ -40,7 +40,7 @@ const Footer = () => {
               <FaTwitter />
             </SocialIconLink>
             <SocialIconLink 
-              href="mailto:your.email@example.com" 
+              href="mailto:ahmadalnujaidi02@gmail.com" 
               whileHover={{ y: -5, color: '#ea4335' }}
               transition={{ duration: 0.3 }}
             >
@@ -50,10 +50,10 @@ const Footer = () => {
         </FooterTop>
         <Divider />
         <FooterBottom>
-          <Copyright>© {currentYear} Your Name. All rights reserved.</Copyright>
+          <Copyright>© {currentYear} Ahmad Ibrahim Alnujaidi. All rights reserved.</Copyright>
           <FooterLinks>
-            <FooterLink href="#">Privacy Policy</FooterLink>
-            <FooterLink href="#">Terms of Service</FooterLink>
+            {/* <FooterLink href="#">Privacy Policy</FooterLink>
+            <FooterLink href="#">Terms of Service</FooterLink> */}
           </FooterLinks>
         </FooterBottom>
       </FooterWrapper>
