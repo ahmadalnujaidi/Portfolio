@@ -16,8 +16,8 @@ const Resume = () => {
           A summary of my education, work experience, and qualifications.
         </PageDescription>
         <DownloadButton 
-          href="/files/resume.pdf" 
-          target="_blank" 
+          href="/files/AhmadCV.pdf" 
+          download="Ahmad_Alnujaidi_Resume.pdf"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -147,59 +147,65 @@ const Resume = () => {
 // Resume data
 const educationData = [
   {
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'University of Technology',
-    period: '2019 - 2023',
-    description: 'Graduated with honors. Specialized in software engineering and artificial intelligence. Participated in various hackathons and coding competitions.'
+    degree: 'Bachelor of Science in Software Engineering',
+    institution: 'Prince Mohammad bin Fahd University',
+    period: '2020 - 2025',
+    description: 'Recent Graduate'
+  },
+  {
+    degree: 'IELTS Certification',
+    institution: 'British Council',
+    period: '2020',
+    description: '7.5 / 9.0 Score'
   },
   {
     degree: 'High School Diploma',
-    institution: 'Science Academy High School',
-    period: '2015 - 2019',
-    description: 'Advanced courses in mathematics, physics, and computer science. Graduated with highest honors.'
+    institution: 'Emirates American School',
+    period: '2016 - 2020',
+    description: ''
   }
 ];
 
 const experienceData = [
   {
     position: 'Software Engineering Intern',
-    company: 'Tech Innovations Inc.',
-    period: 'Summer 2022',
-    description: 'Worked on developing and maintaining web applications using React and Node.js. Collaborated with senior developers to implement new features and fix bugs.',
-    skills: ['React', 'Node.js', 'MongoDB', 'Agile Development']
+    company: 'Saudi Aramco',
+    period: 'Sep 2024 - Oct 2024',
+    description: 'Integrated LLMs into employee training and student education programs, that provide real-time,personalized feedback for training progress.',
+    skills: ['HTML/CSS/JavaScript', 'Google Gemini API']
   },
   {
-    position: 'Frontend Developer (Part-time)',
-    company: 'Digital Solutions Agency',
-    period: '2021 - 2022',
-    description: 'Designed and implemented responsive user interfaces for various client projects. Worked closely with UI/UX designers to translate designs into functional web applications.',
-    skills: ['HTML/CSS', 'JavaScript', 'React', 'Responsive Design']
+    position: 'Artificial Intelligence Center Intern',
+    company: 'Prince Mohammad bin Fahd University',
+    period: 'Sep 2024 - Dec 2024',
+    description: "Trained an AI model for real-time object detection, focusing on speed, accuracy, and memory efficiency. Developed many Python scripts for data set manipulation and management. Created a web application for object detection, visualization, and storytelling.",
+    skills: ['HTML/CSS/JS', 'Python', 'Flask', 'Computer Vision', 'YOLO']
   },
   {
-    position: 'Teaching Assistant',
-    company: 'University of Technology',
-    period: '2021 - 2023',
-    description: 'Assisted professors in teaching introductory programming courses. Conducted lab sessions, graded assignments, and provided one-on-one tutoring to students.',
-    skills: ['Python', 'Java', 'Data Structures', 'Algorithms']
+    position: 'Head of the Web and App Development Team',
+    company: 'Google Developer Groups',
+    period: 'Oct 2024 - Present',
+    description: '◦ Head of the Google’s Web and App Development Team, on Prince Mohammad bin Fahd Campus.',
+    skills: ['Web Development', 'Mobile Development']
   }
 ];
-
+// copy over from Skills.js
 const skillCategories = [
   {
     name: 'Programming Languages',
-    skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C/C++', 'HTML/CSS']
+    skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C/C++', 'HTML/CSS', 'C#']
   },
   {
     name: 'Frontend Development',
-    skills: ['React', 'Vue.js', 'Angular', 'Redux', 'SASS/SCSS', 'Styled Components', 'Webpack']
+    skills: ['React', 'Tailwind', 'HTML/CSS/JS']
   },
   {
     name: 'Backend Development',
-    skills: ['Node.js', 'Express.js', 'Django', 'Spring Boot', 'RESTful APIs', 'GraphQL']
+    skills: ['Node.js', 'Express.js','Nest.js', 'Django', 'Flask','ASP.NET', 'REST API']
   },
   {
     name: 'Databases',
-    skills: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Redis']
+    skills: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', ]
   },
   {
     name: 'DevOps & Tools',
@@ -209,29 +215,23 @@ const skillCategories = [
 
 const certificationsData = [
   {
-    title: 'AWS Certified Developer - Associate',
-    issuer: 'Amazon Web Services',
-    date: 'August 2022',
-    url: 'https://www.certmetrics.com/amazon/public/badge.aspx'
+    title: 'Google Project Management Specialist',
+    issuer: 'Google',
+    date: 'Aug 2024',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/LFG7WPJ1NGRW'
   },
-  {
-    title: 'React - The Complete Guide',
-    issuer: 'Udemy',
-    date: 'May 2022',
-    url: 'https://www.udemy.com/certificate/UC-12345/'
-  },
-  {
-    title: 'Hackathon Winner - Best Web Application',
-    issuer: 'TechFest 2022',
-    date: 'March 2022',
-    url: null
-  },
-  {
-    title: 'Python for Data Science and Machine Learning',
-    issuer: 'Coursera',
-    date: 'January 2022',
-    url: 'https://www.coursera.org/account/accomplishments/verify/12345'
-  }
+  // {
+  //   title: 'Hackathon Winner - Best Web Application',
+  //   issuer: 'TechFest 2022',
+  //   date: 'March 2022',
+  //   url: null
+  // },
+  // {
+  //   title: 'Python for Data Science and Machine Learning',
+  //   issuer: 'Coursera',
+  //   date: 'January 2022',
+  //   url: 'https://www.coursera.org/account/accomplishments/verify/12345'
+  // }
 ];
 
 // Styled Components
