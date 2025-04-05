@@ -194,7 +194,10 @@ ${formData.message}
         >
           <ContactForm onSubmit={handleSubmit}>
             {formStatus.submitted && (
-              <FormMessage success={formStatus.success}>
+              <FormMessage 
+                success={formStatus.success}
+                loading={formStatus.loading}
+              >
                 {formStatus.message}
               </FormMessage>
             )}
@@ -407,10 +410,12 @@ const FormMessage = styled.div`
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 4px;
-  background-color: ${({ success, theme }) => 
-    success ? theme.colors.success + '20' : theme.colors.error + '20'};
-  color: ${({ success, theme }) => 
-    success ? theme.colors.success : theme.colors.error};
+  background-color: ${({ success, loading, theme }) => 
+    success ? theme.colors.success + '20' : 
+    loading ? '#FFD700' + '20' : theme.colors.error + '20'};
+  color: ${({ success, loading, theme }) => 
+    success ? theme.colors.success : 
+    loading ? '#FFD700' : theme.colors.error};
   font-size: 0.95rem;
 `;
 
