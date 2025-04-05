@@ -55,12 +55,12 @@ const Projects = () => {
             Web
           </FilterButton>
           <FilterButton 
-            active={filter === 'mobile'} 
-            onClick={() => handleFilterChange('mobile')}
+            active={filter === 'frontend'} 
+            onClick={() => handleFilterChange('frontend')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Mobile
+            Frontend
           </FilterButton>
           <FilterButton 
             active={filter === 'backend'} 
@@ -174,104 +174,14 @@ const projectsData = [
     demo: 'https://youtu.be/qv1UIVPW2Jc'
   },
   {
-    title: 'Task Management App',
+    title: 'Nataj',
     description: 'A productivity application for managing tasks, projects, and deadlines with collaborative features.',
-    image: '/images/projects/task-manager.jpg',
-    technologies: ['React', 'Redux', 'Firebase', 'Material UI'],
-    category: ['web'],
-    github: 'https://github.com/yourusername/task-management-app',
-    demo: 'https://task-management-app-demo.netlify.app/'
+    image: '/images/projects/Nataj.png',
+    technologies: ['NestJS', 'React', 'postgres', 'Full Stack'],
+    category: ['web', 'backend', 'frontend'],
+    github: 'https://github.com/ahmadalnujaidi/Nataj',
+    demo: 'https://www.youtube.com/watch?v=fZRzx70ka2A'
   },
-  {
-    title: 'Weather Forecast App',
-    description: 'A mobile application that provides real-time weather forecasts, alerts, and detailed meteorological data.',
-    image: '/images/projects/weather-app.jpg',
-    technologies: ['React Native', 'Redux', 'Weather API', 'Geolocation'],
-    category: ['mobile'],
-    github: 'https://github.com/yourusername/weather-forecast-app',
-    demo: null
-  },
-  {
-    title: 'Social Media Dashboard',
-    description: 'An analytics dashboard for social media managers to track engagement, growth, and campaign performance.',
-    image: '/images/projects/social-dashboard.jpg',
-    technologies: ['Vue.js', 'Chart.js', 'Node.js', 'Express', 'PostgreSQL'],
-    category: ['web', 'backend'],
-    github: 'https://github.com/yourusername/social-media-dashboard',
-    demo: 'https://social-dashboard-demo.netlify.app/'
-  },
-  {
-    title: 'Recipe Sharing Platform',
-    description: 'A community-driven platform for sharing, discovering, and saving recipes with social features.',
-    image: '/images/projects/recipe-app.jpg',
-    technologies: ['React', 'GraphQL', 'Apollo', 'MongoDB', 'AWS S3'],
-    category: ['web', 'backend'],
-    github: 'https://github.com/yourusername/recipe-sharing-platform',
-    demo: 'https://recipe-sharing-demo.netlify.app/'
-  },
-  {
-    title: 'Fitness Tracking App',
-    description: 'A mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.',
-    image: '/images/projects/fitness-app.jpg',
-    technologies: ['Flutter', 'Firebase', 'Health API', 'Provider'],
-    category: ['mobile'],
-    github: 'https://github.com/yourusername/fitness-tracking-app',
-    demo: null
-  },
-  {
-    title: 'Real-time Chat Application',
-    description: 'A messaging platform with real-time communication, user presence indicators, and file sharing capabilities.',
-    image: '/images/projects/chat-app.jpg',
-    technologies: ['React', 'Socket.io', 'Express', 'MongoDB', 'JWT'],
-    category: ['web', 'backend'],
-    github: 'https://github.com/yourusername/real-time-chat-app',
-    demo: 'https://chat-app-demo.netlify.app/'
-  },
-  {
-    title: 'Portfolio Website',
-    description: 'A personal portfolio website showcasing my projects, skills, and professional experience.',
-    image: '/images/projects/portfolio.jpg',
-    technologies: ['React', 'Styled Components', 'Framer Motion'],
-    category: ['web'],
-    github: 'https://github.com/yourusername/portfolio-website',
-    demo: 'https://your-portfolio-website.com'
-  },
-  {
-    title: 'Data Visualization Dashboard',
-    description: 'An interactive dashboard for visualizing complex datasets with customizable charts and filters.',
-    image: '/images/projects/data-viz.jpg',
-    technologies: ['D3.js', 'React', 'TypeScript', 'Node.js', 'CSV Parser'],
-    category: ['web', 'other'],
-    github: 'https://github.com/yourusername/data-visualization-dashboard',
-    demo: 'https://data-viz-demo.netlify.app/'
-  },
-  {
-    title: 'RESTful API Service',
-    description: 'A robust API service providing endpoints for data management, authentication, and third-party integrations.',
-    image: '/images/projects/api-service.jpg',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Swagger'],
-    category: ['backend'],
-    github: 'https://github.com/yourusername/restful-api-service',
-    demo: null
-  },
-  {
-    title: 'Music Streaming App',
-    description: 'A mobile application for streaming music with playlist creation, artist discovery, and offline listening.',
-    image: '/images/projects/music-app.jpg',
-    technologies: ['React Native', 'Redux', 'Node.js', 'MongoDB', 'AWS S3'],
-    category: ['mobile', 'backend'],
-    github: 'https://github.com/yourusername/music-streaming-app',
-    demo: null
-  },
-  {
-    title: 'Machine Learning Model',
-    description: 'A predictive model for analyzing customer behavior and providing personalized recommendations.',
-    image: '/images/projects/ml-model.jpg',
-    technologies: ['Python', 'TensorFlow', 'Pandas', 'Scikit-learn', 'Jupyter'],
-    category: ['other'],
-    github: 'https://github.com/yourusername/machine-learning-model',
-    demo: null
-  }
 ];
 
 // Styled Components
