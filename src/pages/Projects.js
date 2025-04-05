@@ -166,7 +166,7 @@ const Projects = () => {
 const projectsData = [
   {
     title: 'Object Detection Web Application',
-    description: 'A web application for object detection using computer vision, it detects objects in real-time and provides detailed story telling of detected objects.',
+    description: 'This project is a real-time object detection web application using a YOLO model, combined with a Generative AI model to produce storytelling descriptions of detected objects. The application captures frames from a webcam, performs object detection, and displays detections on a web interface. Additionally, it logs the detected items with their approximate locations and generates a story-like description of the scene every 5 seconds.',
     image: '/images/projects/WebAppOD.jpg',
     technologies: ['Flask', 'Python', 'HTML', 'Computer Vision', 'YOLO'],
     category: ['web', 'other'],
@@ -175,13 +175,22 @@ const projectsData = [
   },
   {
     title: 'Nataj',
-    description: 'A productivity application for managing tasks, projects, and deadlines with collaborative features.',
+    description: 'This application was built during a hackathon to help Mid-sized manufacturers and B2B buyers gain real-time visibility into production timelines and quality checks.',
     image: '/images/projects/Nataj.png',
     technologies: ['NestJS', 'React', 'postgres', 'Full Stack'],
     category: ['web', 'backend', 'frontend'],
     github: 'https://github.com/ahmadalnujaidi/Nataj',
     demo: 'https://www.youtube.com/watch?v=fZRzx70ka2A'
   },
+  {
+    title: 'Sketch-To-Art',
+    description: 'Web application where users can upload their sketches and receive AI-generated art pieces.',
+    image: '/images/projects/sketch-to-art.png',
+    technologies: ['HTML/CSS', 'Javascript', 'Node.js', 'OpenAI API', 'DALL-E'],
+    category: ['web', 'frontend', 'backend'],
+    github: 'https://github.com/ahmadalnujaidi/Sketch-To-Art',
+    demo: 'https://www.youtube.com/watch?v=ePQIamc7ETE'
+  }
 ];
 
 // Styled Components

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaPaperPlane, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +15,8 @@ const Contact = () => {
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     success: false,
-    message: ''
+    message: '',
+    loading: false
   });
 
   const handleChange = (e) => {
@@ -33,26 +35,69 @@ const Contact = () => {
       setFormStatus({
         submitted: true,
         success: false,
-        message: 'Please fill in all required fields.'
+        message: 'Please fill in all required fields.',
+        loading: false
       });
       return;
     }
     
-    // In a real application, you would send the form data to a backend service
-    // For demonstration, we'll simulate a successful submission
+    // Set loading state
     setFormStatus({
       submitted: true,
-      success: true,
-      message: 'Your message has been sent successfully! I will get back to you soon.'
+      success: false,
+      message: 'Sending your message...',
+      loading: true
     });
     
-    // Reset form after successful submission
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    // Send email using EmailJS
+    const serviceId = 'service_c64i48p';
+    const templateId = 'template_vc7qd9t';
+    const publicKey = 'CW-zP8cTGpr2ibD2t';
+    
+    // Format all form data into a single message string
+    const formattedMessage = `
+Name: ${formData.name}
+Email: ${formData.email}
+Subject: ${formData.subject || 'No Subject'}
+
+Message:
+${formData.message}
+`;
+    
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject || 'Message from Portfolio Contact Form',
+      message: formattedMessage
+    };
+    
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setFormStatus({
+          submitted: true,
+          success: true,
+          message: 'Your message has been sent successfully! I will get back to you soon.',
+          loading: false
+        });
+        
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        setFormStatus({
+          submitted: true,
+          success: false,
+          message: 'Failed to send message. Please try again later.',
+          loading: false
+        });
+      });
   };
 
   return (
@@ -160,8 +205,9 @@ const Contact = () => {
                 type="text" 
                 id="name" 
                 name="name" 
-                value={formData.name}
+                value={formData.name} 
                 onChange={handleChange}
+                disabled={formStatus.loading}
                 required
               />
             </FormGroup>
@@ -172,8 +218,9 @@ const Contact = () => {
                 type="email" 
                 id="email" 
                 name="email" 
-                value={formData.email}
+                value={formData.email} 
                 onChange={handleChange}
+                disabled={formStatus.loading}
                 required
               />
             </FormGroup>
@@ -184,8 +231,9 @@ const Contact = () => {
                 type="text" 
                 id="subject" 
                 name="subject" 
-                value={formData.subject}
+                value={formData.subject} 
                 onChange={handleChange}
+                disabled={formStatus.loading}
               />
             </FormGroup>
             
@@ -194,9 +242,10 @@ const Contact = () => {
               <FormTextarea 
                 id="message" 
                 name="message" 
-                rows="6" 
-                value={formData.message}
+                rows="5" 
+                value={formData.message} 
                 onChange={handleChange}
+                disabled={formStatus.loading}
                 required
               />
             </FormGroup>
@@ -205,8 +254,14 @@ const Contact = () => {
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              disabled={formStatus.loading}
             >
-              <FaPaperPlane style={{ marginRight: '8px' }} /> Send Message
+              {formStatus.loading ? 'Sending...' : (
+                <>
+                  <FaPaperPlane style={{ marginRight: '0.5rem' }} />
+                  Send Message
+                </>
+              )}
             </SubmitButton>
           </ContactForm>
         </ContactFormSection>

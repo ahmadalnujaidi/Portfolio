@@ -73,7 +73,7 @@ const Home = () => {
               <StatLabel>Projects Completed</StatLabel>
             </StatItem>
             <StatItem>
-              <StatNumber>5+</StatNumber>
+              <StatNumber>8+</StatNumber>
               <StatLabel>Technologies</StatLabel>
             </StatItem>
             <StatItem>
@@ -123,6 +123,12 @@ const Home = () => {
               <SkillItem>
                 <SkillName>Python</SkillName>
                 <SkillBar>
+                  <SkillProgress width="85%" />
+                </SkillBar>
+              </SkillItem>
+              <SkillItem>
+                <SkillName>ASP.NET</SkillName>
+                <SkillBar>
                   <SkillProgress width="75%" />
                 </SkillBar>
               </SkillItem>
@@ -153,20 +159,22 @@ const Home = () => {
             whileHover={{ y: -10 }}
             transition={{ duration: 0.3 }}
           >
-            <ProjectImage src="/images/project1-placeholder.jpg" alt="Project 1" />
+            <ProjectImage src="/images/projects/WebAppOD.jpg" alt="Project 1" />
             <ProjectContent>
-              <ProjectTitle>Project One</ProjectTitle>
+              <ProjectTitle>Object Detection Web Application</ProjectTitle>
               <ProjectDescription>
-                A web application built with React and Node.js that helps users manage their tasks efficiently.
+              This project is a real-time object detection web application using a YOLO model, combined with a Generative AI model to produce storytelling descriptions of detected objects. The application captures frames from a webcam, performs object detection, and displays detections on a web interface. Additionally, it logs the detected items with their approximate locations and generates a story-like description of the scene every 5 seconds.
               </ProjectDescription>
               <ProjectTags>
-                <ProjectTag>React</ProjectTag>
-                <ProjectTag>Node.js</ProjectTag>
-                <ProjectTag>MongoDB</ProjectTag>
+                <ProjectTag>Flask</ProjectTag>
+                <ProjectTag>Python</ProjectTag>
+                <ProjectTag>HTML</ProjectTag>
+                <ProjectTag>Computer Vision</ProjectTag>
+                <ProjectTag>YOLO</ProjectTag>
               </ProjectTags>
               <ProjectLinks>
-                <ProjectLink href="#" target="_blank" rel="noopener noreferrer">Demo</ProjectLink>
-                <ProjectLink href="#" target="_blank" rel="noopener noreferrer">GitHub</ProjectLink>
+                <ProjectLink href="https://youtu.be/qv1UIVPW2Jc" target="_blank" rel="noopener noreferrer">Demo</ProjectLink>
+                <ProjectLink href="https://github.com/ahmadalnujaidi/Object-Detection-Web-Application" target="_blank" rel="noopener noreferrer">GitHub</ProjectLink>
               </ProjectLinks>
             </ProjectContent>
           </ProjectCard>
@@ -175,20 +183,44 @@ const Home = () => {
             whileHover={{ y: -10 }}
             transition={{ duration: 0.3 }}
           >
-            <ProjectImage src="/images/project2-placeholder.jpg" alt="Project 2" />
+            <ProjectImage src="/images/projects/sketch-to-art.png" alt="Project 2" />
             <ProjectContent>
-              <ProjectTitle>Project Two</ProjectTitle>
+              <ProjectTitle>Sketch-To-Art-App</ProjectTitle>
               <ProjectDescription>
-                An e-commerce platform with a responsive design, user authentication, and payment integration.
+                Web application where users can upload their sketches and receive AI-generated art pieces.
               </ProjectDescription>
               <ProjectTags>
-                <ProjectTag>React</ProjectTag>
-                <ProjectTag>Express</ProjectTag>
-                <ProjectTag>Stripe</ProjectTag>
+                <ProjectTag>HTML/CSS</ProjectTag>
+                <ProjectTag>JavaScript</ProjectTag>
+                <ProjectTag>Node.js</ProjectTag>
+                <ProjectTag>OpenAI API</ProjectTag>
+                <ProjectTag>DALL-E</ProjectTag>
               </ProjectTags>
               <ProjectLinks>
-                <ProjectLink href="#" target="_blank" rel="noopener noreferrer">Demo</ProjectLink>
-                <ProjectLink href="#" target="_blank" rel="noopener noreferrer">GitHub</ProjectLink>
+                <ProjectLink href="https://www.youtube.com/watch?v=ePQIamc7ETE" target="_blank" rel="noopener noreferrer">Demo</ProjectLink>
+                <ProjectLink href="https://github.com/ahmadalnujaidi/Sketch-To-Art" target="_blank" rel="noopener noreferrer">GitHub</ProjectLink>
+              </ProjectLinks>
+            </ProjectContent>
+          </ProjectCard>
+          <ProjectCard
+            whileHover={{ y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ProjectImage src="/images/projects/Nataj.png" alt="Project 1" />
+            <ProjectContent>
+              <ProjectTitle>Nataj</ProjectTitle>
+              <ProjectDescription>
+                This application was built during a hackathon to help Mid-sized manufacturers and B2B buyers gain real-time visibility into production timelines and quality checks.
+              </ProjectDescription>
+              <ProjectTags>
+                <ProjectTag>NestJS</ProjectTag>
+                <ProjectTag>React</ProjectTag>
+                <ProjectTag>postgres</ProjectTag>
+                <ProjectTag>Full Stack</ProjectTag>
+              </ProjectTags>
+              <ProjectLinks>
+                <ProjectLink href="https://www.youtube.com/watch?v=fZRzx70ka2A" target="_blank" rel="noopener noreferrer">Demo</ProjectLink>
+                <ProjectLink href="https://github.com/ahmadalnujaidi/Nataj" target="_blank" rel="noopener noreferrer">GitHub</ProjectLink>
               </ProjectLinks>
             </ProjectContent>
           </ProjectCard>

@@ -163,34 +163,6 @@ const Skills = () => {
         </SkillsGrid>
       </SkillsSection>
 
-      <SkillsSection>
-        <SectionTitle>
-          <SectionIcon><FaMobileAlt /></SectionIcon>
-          <span>Mobile Development</span>
-        </SectionTitle>
-        <SkillsGrid>
-          {mobileSkills.map((skill, index) => (
-            <SkillCard
-              key={index}
-              {...fadeIn}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <SkillHeader>
-                <SkillIcon src={skill.icon} alt={skill.name} />
-                <SkillName>{skill.name}</SkillName>
-              </SkillHeader>
-              <SkillLevel>
-                <SkillBar>
-                  <SkillProgress width={skill.level} />
-                </SkillBar>
-                <SkillPercentage>{skill.level}</SkillPercentage>
-              </SkillLevel>
-              <SkillDescription>{skill.description}</SkillDescription>
-            </SkillCard>
-          ))}
-        </SkillsGrid>
-      </SkillsSection>
-
       <OtherSkillsSection>
         <SectionTitle>Other Skills</SectionTitle>
         <OtherSkillsGrid>
@@ -215,7 +187,7 @@ const programmingLanguages = [
   {
     name: 'JavaScript',
     icon: '/images/skills/javascript.png',
-    level: '90%',
+    level: '100%',
     description: 'Proficient in modern JavaScript (ES6+), async programming, and functional concepts.'
   },
   {
@@ -227,13 +199,13 @@ const programmingLanguages = [
   {
     name: 'Java',
     icon: '/images/skills/java.png',
-    level: '75%',
+    level: '85%',
     description: 'Strong understanding of Java fundamentals, OOP principles, and application development.'
   },
   {
     name: 'TypeScript',
     icon: '/images/skills/typescript.png',
-    level: '80%',
+    level: '90%',
     description: 'Skilled in TypeScript for building type-safe applications with improved developer experience.'
   },
   {
@@ -243,8 +215,14 @@ const programmingLanguages = [
     description: 'Familiar with C/C++ for system programming and performance-critical applications.'
   },
   {
+    name: 'C#',
+    icon: '/images/skills/csharp.jpg',
+    level: '80%',
+    description: 'Familiar with C# for building enterprise applications.'
+  },
+  {
     name: 'HTML/CSS',
-    icon: '/images/skills/html-css.png',
+    icon: '/images/skills/html.jpg',
     level: '95%',
     description: 'Expert in creating semantic HTML and responsive CSS layouts with modern techniques.'
   }
@@ -253,52 +231,34 @@ const programmingLanguages = [
 const frontendSkills = [
   {
     name: 'React',
-    icon: '/images/skills/react.png',
+    icon: '/images/skills/react.jpg',
     level: '90%',
     description: 'Extensive experience building single-page applications with React, Redux, and hooks.'
   },
   {
-    name: 'Vue.js',
-    icon: '/images/skills/vue.png',
-    level: '75%',
-    description: 'Proficient in Vue.js for building interactive user interfaces and single-page applications.'
-  },
-  {
-    name: 'Angular',
-    icon: '/images/skills/angular.png',
-    level: '70%',
-    description: 'Familiar with Angular framework for building robust enterprise applications.'
-  },
-  {
-    name: 'SASS/SCSS',
-    icon: '/images/skills/sass.png',
-    level: '85%',
-    description: 'Skilled in writing maintainable CSS with SASS/SCSS preprocessors.'
-  },
-  {
-    name: 'Styled Components',
-    icon: '/images/skills/styled-components.png',
-    level: '85%',
-    description: 'Experienced with CSS-in-JS solutions for component-based styling.'
-  },
-  {
-    name: 'Webpack',
-    icon: '/images/skills/webpack.png',
+    name: 'Tailwind',
+    icon: '/images/skills/tailwind.png',
     level: '80%',
-    description: 'Proficient in configuring and optimizing Webpack for modern web applications.'
+    description: 'Experienced with Tailwind CSS for component-based styling.'
+  },
+  {
+    name: 'HTML/CSS/JS',
+    icon: '/images/skills/html.jpg',
+    level: '95%',
+    description: 'Expert in creating semantic HTML and responsive CSS layouts with modern techniques.'
   }
 ];
 
 const backendSkills = [
   {
     name: 'Node.js',
-    icon: '/images/skills/nodejs.png',
+    icon: '/images/skills/nodejs.jpg',
     level: '85%',
     description: 'Strong experience building RESTful APIs and microservices with Node.js and Express.'
   },
   {
     name: 'Express.js',
-    icon: '/images/skills/express.png',
+    icon: '/images/skills/express.jpg',
     level: '85%',
     description: 'Skilled in creating robust server-side applications with Express.js framework.'
   },
@@ -308,22 +268,17 @@ const backendSkills = [
     level: '75%',
     description: 'Experienced in building full-stack applications with Django and Python.'
   },
+
   {
-    name: 'Spring Boot',
-    icon: '/images/skills/spring.png',
-    level: '70%',
-    description: 'Familiar with Java Spring Boot for building enterprise-grade applications.'
-  },
-  {
-    name: 'GraphQL',
-    icon: '/images/skills/graphql.png',
-    level: '80%',
-    description: 'Proficient in designing and implementing GraphQL APIs for efficient data fetching.'
+    name: 'ASP.NET',
+    icon: '/images/skills/aspnet.png',
+    level: '75%',
+    description: 'Proficient in building enterprise-grade applications with ASP.NET.'
   },
   {
     name: 'REST API',
     icon: '/images/skills/rest.png',
-    level: '90%',
+    level: '100%',
     description: 'Expert in designing and implementing RESTful APIs following best practices.'
   }
 ];
@@ -331,26 +286,26 @@ const backendSkills = [
 const databaseSkills = [
   {
     name: 'MongoDB',
-    icon: '/images/skills/mongodb.png',
-    level: '85%',
+    icon: '/images/skills/mongodb.jpg',
+    level: '95%',
     description: 'Experienced in designing and working with NoSQL databases using MongoDB.'
   },
   {
     name: 'PostgreSQL',
-    icon: '/images/skills/postgresql.png',
-    level: '80%',
+    icon: '/images/skills/postgres.jpg',
+    level: '85%',
     description: 'Proficient in relational database design and optimization with PostgreSQL.'
   },
   {
     name: 'MySQL',
-    icon: '/images/skills/mysql.png',
+    icon: '/images/skills/mysql.jpg',
     level: '80%',
     description: 'Strong skills in MySQL database administration, optimization, and query design.'
   },
   {
     name: 'Firebase',
     icon: '/images/skills/firebase.png',
-    level: '85%',
+    level: '50%',
     description: 'Skilled in using Firebase for real-time databases, authentication, and cloud functions.'
   }
 ];
@@ -358,48 +313,33 @@ const databaseSkills = [
 const toolsSkills = [
   {
     name: 'Git',
-    icon: '/images/skills/git.png',
+    icon: '/images/skills/git.jpg',
     level: '90%',
     description: 'Expert in version control with Git, including branching strategies and collaborative workflows.'
   },
   {
     name: 'Docker',
-    icon: '/images/skills/docker.png',
-    level: '80%',
+    icon: '/images/skills/docker.jpg',
+    level: '60%',
     description: 'Proficient in containerizing applications and managing multi-container environments.'
   },
   {
     name: 'AWS',
-    icon: '/images/skills/aws.png',
-    level: '75%',
+    icon: '/images/skills/aws.jpg',
+    level: '70%',
     description: 'Experienced with various AWS services for cloud deployment and infrastructure.'
   },
   {
     name: 'CI/CD',
-    icon: '/images/skills/cicd.png',
+    icon: '/images/skills/cicd.jpg',
     level: '85%',
     description: 'Skilled in setting up continuous integration and deployment pipelines.'
   },
   {
     name: 'Jest',
-    icon: '/images/skills/jest.png',
-    level: '85%',
+    icon: '/images/skills/jest.jpg',
+    level: '45%',
     description: 'Proficient in writing unit and integration tests with Jest testing framework.'
-  }
-];
-
-const mobileSkills = [
-  {
-    name: 'React Native',
-    icon: '/images/skills/react-native.png',
-    level: '80%',
-    description: 'Experienced in building cross-platform mobile applications with React Native.'
-  },
-  {
-    name: 'Flutter',
-    icon: '/images/skills/flutter.png',
-    level: '70%',
-    description: 'Familiar with Flutter framework for building beautiful native applications.'
   }
 ];
 
