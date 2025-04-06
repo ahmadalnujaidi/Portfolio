@@ -69,7 +69,7 @@ const Home = () => {
           </AboutText>
           <StatsContainer>
             <StatItem>
-              <StatNumber>10+</StatNumber>
+              <StatNumber>5+</StatNumber>
               <StatLabel>Projects Completed</StatLabel>
             </StatItem>
             <StatItem>
@@ -77,7 +77,7 @@ const Home = () => {
               <StatLabel>Technologies</StatLabel>
             </StatItem>
             <StatItem>
-              <StatNumber>3+</StatNumber>
+              <StatNumber>1+</StatNumber>
               <StatLabel>Years Experience</StatLabel>
             </StatItem>
           </StatsContainer>
