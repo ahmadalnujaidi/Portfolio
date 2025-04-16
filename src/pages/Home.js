@@ -42,7 +42,7 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <ProfileImage src="/images/face.jpg" alt="Your Name" />
+          <ProfileImage src="/images/faceMasar.jpg" alt="Your Name" />
         </HeroImage>
       </HeroSection>
 
