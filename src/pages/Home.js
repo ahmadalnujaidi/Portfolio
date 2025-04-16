@@ -14,7 +14,7 @@ const Home = () => {
           transition={{ duration: 0.6 }}
         >
           <Greeting>Hello, I'm</Greeting>
-          <Name>Ahmad Y Alnujaidi</Name>
+          <Name>Ahmad Alnujaidi</Name>
           <Title>Software Engineer</Title>
           <Description>
             I'm passionate about building innovative solutions and creating meaningful user experiences.
